@@ -9,6 +9,89 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Style sheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .skill-category {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        .skill-category:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .skill-category h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-badge {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            border: 1px solid var(--glass-border);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .skill-badge:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 20px;
+            border-left: 2px solid var(--glass-border);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 2px solid var(--bg-dark);
+        }
+        .timeline-date {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .timeline-institution {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,53 +130,132 @@
         <section class="section">
             <div class="container">
                 <div class="about-grid">
-                    <img src="profile.jpg" alt="Gubba Nithish Picture" class="hero-img" style="border-radius: 20px;">
+                    <img src="profile.jpg" alt="Gubba Nithish" class="hero-img" style="border-radius: 20px;">
                     <div class="about-text">
-                        <h3>Education & Background</h3>
-                        <p>I am pursuing my **Diploma in Computer Science & Engineering** (2022-2025) at **Teegala Krishna Reddy Engineering College (TKREC)** in Hyderabad, India.</p>
-                        <p>My interest lies in building robust backends and clean architectures. I am experienced in designing and developing web portals that combine Java server logic, database connectivity, and responsive user interfaces.</p>
+                        <h3>My Journey</h3>
+                        <p>I am a passionate web developer and B.Tech Information Technology student with a strong foundation in full-stack engineering. I enjoy developing high-quality, scalable solutions and integrating machine learning capabilities into real-world applications.</p>
                         
-                        <!-- Skills bars -->
-                        <div class="skills-container">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Java (Servlets & JSP)</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
-                                </div>
+                        <h3 style="margin-top: 30px;">Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2025 – 2028 (Pursuing)</div>
+                                <div class="timeline-title">B.Tech – Information Technology</div>
+                                <div class="timeline-institution">Vidya Jyothi Institute of Technology (VJIT), Hyderabad</div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>MySQL & Database Systems</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>HTML5 / CSS3</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>JavaScript & DOM Manipulation</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 75%;"></div>
-                                </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022 – 2025</div>
+                                <div class="timeline-title">Diploma – Computer Science Engineering</div>
+                                <div class="timeline-institution">Teegala Krishna Reddy Engineering College</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Technical Skills -->
+                <div style="margin-top: 60px;">
+                    <h3 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 40px;">Technical Skills</h3>
+                    
+                    <div class="skills-grid">
+                        <!-- Languages -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-code"></i> Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">Java</span>
+                                <span class="skill-badge">C</span>
+                                <span class="skill-badge">C++</span>
+                                <span class="skill-badge">C#</span>
+                                <span class="skill-badge">PHP</span>
+                                <span class="skill-badge">TypeScript</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Frontend -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-window-restore"></i> Frontend</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">HTML5</span>
+                                <span class="skill-badge">CSS3</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">React</span>
+                                <span class="skill-badge">Next.js</span>
+                                <span class="skill-badge">Angular.js</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">TailwindCSS</span>
+                            </div>
+                        </div>
+
+                        <!-- Backend -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-server"></i> Backend & Frameworks</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">Node.js</span>
+                                <span class="skill-badge">Express.js</span>
+                                <span class="skill-badge">Django</span>
+                                <span class="skill-badge">Flask</span>
+                                <span class="skill-badge">FastAPI</span>
+                                <span class="skill-badge">Flutter</span>
+                                <span class="skill-badge">.NET</span>
+                            </div>
+                        </div>
+
+                        <!-- Databases -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-database"></i> Databases</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">MySQL</span>
+                                <span class="skill-badge">MongoDB</span>
+                                <span class="skill-badge">SQLite</span>
+                                <span class="skill-badge">Supabase</span>
+                                <span class="skill-badge">Firebase</span>
+                            </div>
+                        </div>
+
+                        <!-- Cloud & DevOps -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-cloud-arrow-up"></i> Cloud & DevOps</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">AWS</span>
+                                <span class="skill-badge">Google Cloud</span>
+                                <span class="skill-badge">Netlify</span>
+                                <span class="skill-badge">Vercel</span>
+                                <span class="skill-badge">Render</span>
+                                <span class="skill-badge">Git</span>
+                                <span class="skill-badge">GitHub Actions</span>
+                            </div>
+                        </div>
+
+                        <!-- ML / Data Science -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-brain"></i> ML & Data Science</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">TensorFlow</span>
+                                <span class="skill-badge">PyTorch</span>
+                                <span class="skill-badge">Keras</span>
+                                <span class="skill-badge">scikit-learn</span>
+                                <span class="skill-badge">OpenCV</span>
+                                <span class="skill-badge">NumPy</span>
+                                <span class="skill-badge">Pandas</span>
+                                <span class="skill-badge">Matplotlib</span>
+                            </div>
+                        </div>
+
+                        <!-- Tools & Design -->
+                        <div class="skill-category">
+                            <h4><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Design</h4>
+                            <div class="skill-tags">
+                                <span class="skill-badge">Figma</span>
+                                <span class="skill-badge">Postman</span>
+                                <span class="skill-badge">Arduino</span>
+                                <span class="skill-badge">Raspberry Pi</span>
+                                <span class="skill-badge">Adobe Photoshop</span>
+                                <span class="skill-badge">Vite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -103,7 +265,7 @@
         <div class="footer-container">
             <p>&copy; 2026 Gubba Nithish. All rights reserved.</p>
             <div class="social-links">
-                <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Nithish016" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
                 <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
             </div>
