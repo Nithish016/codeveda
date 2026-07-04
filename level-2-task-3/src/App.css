@@ -1,0 +1,298 @@
+.calculator-container {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    max-width: 680px;
+    width: 95%;
+    align-items: stretch;
+}
+
+/* Background Bubbles for Depth */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.bubble-1 {
+    width: 250px;
+    height: 250px;
+    background: var(--primary);
+    top: -80px;
+    left: -80px;
+}
+
+.bubble-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent);
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Calculator Main Body */
+.calculator-body {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.title-bar span {
+    color: var(--primary);
+}
+
+.window-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+/* Display Screen */
+.calculator-screen {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 110px;
+    overflow: hidden;
+}
+
+.screen-formula {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 20px;
+    word-break: break-all;
+    text-align: right;
+}
+
+.screen-value {
+    color: var(--text-light);
+    font-size: 2.2rem;
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 8px;
+    word-break: break-all;
+    text-align: right;
+}
+
+/* Keypad Grid */
+.calculator-keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.calc-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 54px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.calc-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.calc-btn:active {
+    transform: translateY(1px);
+}
+
+/* Class-based button overrides */
+.calc-btn.operator {
+    color: var(--accent);
+    background: rgba(0, 210, 211, 0.05);
+    border-color: rgba(0, 210, 211, 0.15);
+}
+
+.calc-btn.operator:hover {
+    background: rgba(0, 210, 211, 0.12);
+    border-color: rgba(0, 210, 211, 0.3);
+}
+
+.calc-btn.clear {
+    color: #ff5f56;
+    background: rgba(255, 95, 86, 0.05);
+    border-color: rgba(255, 95, 86, 0.15);
+}
+
+.calc-btn.clear:hover {
+    background: rgba(255, 95, 86, 0.12);
+    border-color: rgba(255, 95, 86, 0.3);
+}
+
+.calc-btn.equals {
+    grid-column: span 2;
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(138, 74, 243, 0.3);
+}
+
+.calc-btn.equals:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 6px 20px rgba(138, 74, 243, 0.5);
+}
+
+/* History Sidebar Panel */
+.calculator-history {
+    flex: 0.8;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 440px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-header h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.btn-clear-history {
+    background: transparent;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn-clear-history:hover {
+    color: #ff5f56;
+    text-decoration: underline;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 5px;
+}
+
+.history-list::-webkit-scrollbar {
+    width: 4px;
+}
+.history-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.history-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.history-formula {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.history-result {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-light);
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 4px;
+}
+
+.history-empty {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.history-empty i {
+    font-size: 1.8rem;
+    opacity: 0.3;
+}
+
+
+/* Responsive Media Queries */
+@media screen and (max-width: 600px) {
+    .calculator-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .calculator-history {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-left: 0;
+        padding-top: 20px;
+        max-height: 180px;
+    }
+}
