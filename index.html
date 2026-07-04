@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VedaBites | Gourmet Food Delivered Hot</title>
+    <meta name="description" content="Welcome to VedaBites. Order fresh, organic, and premium quality meals crafted by our gourmet chefs. Quick local delivery.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-utensils"></i> Veda<span>Bites</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-order">Order Now</a>
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-promo">
+                        <i class="fa-solid fa-fire"></i> Fresh & Hot Delivery
+                    </div>
+                    <h1 class="hero-title">
+                        Gourmet Meals <br>Delivered to Your <span>Doorstep</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Experience restaurant-quality dishes crafted by premium local chefs, delivered hot and fresh in under 20 minutes.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn-order">Get Started</a>
+                        <a href="about.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&auto=format&fit=crop&q=80" alt="Gourmet Food Selection" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Our Services</span>
+                    <h2 class="section-title">What We Offer</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <h3>Super Fast Delivery</h3>
+                        <p>Hot, fresh, and tasty meals delivered to your doorstep in under 20 minutes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>Fresh Ingredients</h3>
+                        <p>We source only high-quality, organic ingredients from local farms and vendors.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-percent"></i></div>
+                        <h3>Exclusive Offers</h3>
+                        <p>Amazing daily discount deals, coupons, and seasonal combo menu options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <i class="fa-solid fa-utensils"></i> Veda<span>Bites</span>
+                </a>
+                <p>Bringing delicious, chef-crafted premium quality meals right to your doorstep with incredible speed and fresh local ingredients.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Delivery Areas</a></li>
+                    <li><a href="#">FAQ & Help Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter to receive updates on new recipes and promotional offers.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 VedaBites. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

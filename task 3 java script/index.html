@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 | JavaScript Interactivity Showcase</title>
+    <meta name="description" content="A demonstration of JavaScript interactivity, featuring custom dropdowns, interactive modal windows, and form input validation.">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Outfit & Inter Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Style connection -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>JavaScript Interactivity</h1>
+        <p class="subtitle">Task 3: Dropdowns, Modals, and Form Validations</p>
+
+        <div class="interactive-section">
+            
+            <!-- Dropdown Showcase -->
+            <div>
+                <h3 class="section-title">1. Dropdown Selection</h3>
+                <div class="dropdown-container">
+                    <button class="dropdown-trigger" id="dropdown-btn">
+                        <span id="dropdown-selected">Choose a technology...</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="dropdown-list">
+                        <li class="dropdown-item" data-value="HTML5">HTML5 Markup</li>
+                        <li class="dropdown-item" data-value="CSS3">CSS3 Styles</li>
+                        <li class="dropdown-item" data-value="JavaScript">JavaScript Logic</li>
+                        <li class="dropdown-item" data-value="Python">Python programming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Modal Showcase -->
+            <div>
+                <h3 class="section-title">2. Modal Overlay</h3>
+                <button class="btn-modal-trigger" id="modal-open-btn">Open Dialog Box</button>
+            </div>
+
+            <!-- Form Validation Showcase -->
+            <div>
+                <h3 class="section-title">3. Form Input Validation</h3>
+                <form id="validate-form" novalidate>
+                    <!-- Username field -->
+                    <div class="form-group" id="group-username">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="At least 3 characters">
+                        <span class="error-message">Username must be at least 3 characters.</span>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="form-group" id="group-email">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com">
+                        <span class="error-message">Please enter a valid email address.</span>
+                    </div>
+
+                    <!-- Password field -->
+                    <div class="form-group" id="group-password">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="At least 6 characters">
+                        <span class="error-message">Password must be at least 6 characters.</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Form</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Overlay Structure -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h2>Notification</h2>
+            <p>This is a custom interactive modal window triggered dynamically using vanilla JavaScript event listeners.</p>
+            <button class="btn-close-modal" id="modal-close-btn">Dismiss</button>
+        </div>
+    </div>
+
+    <!-- Script connection -->
+    <script src="script.js"></script>
+</body>
+</html>

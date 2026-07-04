@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Nithish Portfolio</title>
+    <meta name="description" content="Learn about my background, core software capabilities, technology stacks, and professional coding skills.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                Nithish<span>.</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-hire">Hire Me</a>
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>About Me</h1>
+            <p>My journey, coding capabilities, and technical skillset.</p>
+        </section>
+
+        <!-- Profile Details -->
+        <section class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80" alt="Developer Profile Picture" class="hero-img" style="border-radius: 20px;">
+                    <div class="about-text">
+                        <h3>Turning Ideas Into Clean Code</h3>
+                        <p>I am a passionate software engineer focused on building robust, scalable web products. With a solid foundation in computer science and full-stack development, I enjoy resolving complex engineering problems and crafting user-first interfaces.</p>
+                        
+                        <!-- Skills bars -->
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5 / CSS3</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript (ES6+)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python / Django</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Databases (MySQL / MongoDB)</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Nithish. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
