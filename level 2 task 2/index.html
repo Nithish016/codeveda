@@ -21,9 +21,25 @@
         <!-- Input Section -->
         <div class="input-section">
             <input type="text" placeholder="Add a new task..." id="todo-input" autocomplete="off">
+            <select id="todo-priority" aria-label="Task Priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
             <button class="btn-add" id="add-btn" aria-label="Add Task">
                 <i class="fa-solid fa-plus"></i>
             </button>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Progress</span>
+                <span id="progress-text">0/0 Tasks (0%)</span>
+            </div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+            </div>
         </div>
 
         <!-- Controls Section -->

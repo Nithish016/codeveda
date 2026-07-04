@@ -270,3 +270,121 @@ h1 span {
     font-size: 2.5rem;
     color: var(--border);
 }
+
+/* Priority Selector Dropdown */
+.input-section select {
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    padding: 0 14px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.input-section select:focus {
+    border-color: var(--primary);
+}
+
+/* Progress Stats Section */
+.progress-container {
+    margin-bottom: 25px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+}
+
+.progress-bar-wrapper {
+    width: 100%;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Priority Badges */
+.priority-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.priority-tag.low {
+    background: rgba(0, 210, 211, 0.1);
+    color: var(--accent);
+}
+
+.priority-tag.medium {
+    background: rgba(255, 165, 2, 0.1);
+    color: var(--accent);
+}
+
+.priority-tag.high {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error);
+}
+
+/* Action Panel & Buttons */
+.action-panel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-edit {
+    background: transparent;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: var(--transition);
+    padding: 2px 6px;
+}
+
+.btn-edit:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Edit Task Input */
+.edit-task-input {
+    background: var(--bg-card);
+    border: 1px solid var(--primary);
+    color: var(--text-light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task-item.editing .task-checkbox,
+.task-item.editing .priority-tag,
+.task-item.editing .btn-edit {
+    display: none;
+}
+
